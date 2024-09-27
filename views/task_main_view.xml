@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="view_student_marksheet_tree" model="ir.ui.view">
+        <field name="name">student.marksheet.tree</field>
+        <field name="model">student.marksheet</field>
+        <field name="arch" type="xml">
+            <tree string="User">
+                <field name="name"/>
+                <field name="gender"/>
+                <field name="subject"/>
+                <field name="date"/>
+                <field name="mark"/>
+                <field name="remark"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_student_marksheet_form" model="ir.ui.view">
+        <field name="name">student.marksheet.form</field>
+        <field name="model">student.marksheet</field>
+        <field name="arch" type="xml">
+            <form string="User">
+            <sheet>
+            <group>
+                <group>
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="date"/>
+                </group>
+                <group>
+                    <field name="subject"/>
+                    <field name="mark"/>
+                    <field name="remark"/>
+                </group>
+            </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_student_marksheet" model="ir.actions.act_window">
+        <field name="name">Student Marksheet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">student.marksheet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a record
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="student_marksheet"
+    name="Student Marksheet"
+    action="action_student_marksheet"
+    parent="student_marksheet_menu_root"
+    sequence="10"/>
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+
+    <menuitem id="student_marksheet_menu_root"
+    name="Marksheet"
+    sequence="0"/>
+
+
+
+</odoo>
