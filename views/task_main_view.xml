@@ -12,6 +12,7 @@
                 <field name="mark"/>
                 <field name="remark"/>
                 <field name="remark"/>
+                <field name="remark"/>
             </tree>
         </field>
     </record>
